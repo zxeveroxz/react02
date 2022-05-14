@@ -1,0 +1,6 @@
+
+@api = http://localhost:3000/tasks
+
+GET {{api}}
+###
+POST {{api}}
