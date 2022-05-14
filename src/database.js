@@ -1,6 +1,7 @@
-export const config = {
-    host:'jsjfact.com',
-    user:'externo2022',
-    password:'@pOcent0.22',
-    database:'facturador'
-}
+import mysql from 'mysql2/promise';
+import { config } from "./config";
+
+const connect = async () =>{
+    return await mysql.createConnection(config);     
+};
+connect();
