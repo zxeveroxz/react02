@@ -20,3 +20,6 @@ yarn-error.log*
 
 #database
 #.config.js
+.env
+
+dist
