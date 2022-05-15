@@ -1,6 +1,6 @@
 export const config = {
-    host:'com.com',
+    host:'jsjfact.com',
     user:'externo2022',
     password:'@pOcent0.22',
-    database:'' 
+    database:'BD_FACTURADOR' 
 }

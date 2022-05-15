@@ -4,3 +4,22 @@
 GET {{api}}
 ###
 POST {{api}}
+
+###
+GET {{api}}/200000
+###
+
+GET {{api}}/tasks
+###
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id":55,
+    "razon":"nuevo jsj"
+}
+
+###
+DELETE {{api}}/9
