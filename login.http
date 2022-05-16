@@ -17,6 +17,7 @@ POST {{api}}/check
 Content-Type: application/json
 
 {
+    "dev":"ANDROIDZ",
     "uzer":"s.zegarra@hotmail.com",
     "pass":"123"
 }
