@@ -1,0 +1,25 @@
+
+@api = http://localhost:3000/login
+
+GET {{api}}
+###
+POST {{api}}
+
+###
+GET {{api}}/200000
+###
+
+GET {{api}}/tasks
+###
+
+###
+POST {{api}}/check
+Content-Type: application/json
+
+{
+    "uzer":"s.zegarra@hotmail.com",
+    "pass":"123"
+}
+
+###
+DELETE {{api}}/9
