@@ -2,7 +2,7 @@ import { connect } from "../database";
 
 export const getTasks = async (req, res) => {
     const db = await connect();
-    const [rows] = await db.query("select now()");
+    const [rows] = await db.query("select * from tbl_user ");
     res.json(rows)
 }
 
