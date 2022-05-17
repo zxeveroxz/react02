@@ -9,12 +9,15 @@ export const getLogin = async (req,res)=>{
 
 export const checkDev = async (req,res)=>{
     const db = await connect();
-    console.log(req.body)
-    const [rows] = await db.query("SELECT * FROM tbl_token WHERE dispositivo=? ",[req.body.dispositivo]);
+    
+    const [rows]  = await db.query("SELECT * FROM tbl_token WHERE dispositivo=? ",[req.body.dispositivo]);
         if(rows.length==1){
-            await db.query("SELECT * FROM tbl_usuarios WHERE dispositivo=? ",[req.body.dispositivo]);
+           const [rows1] =  await db.query("SELECT * FROM tbl_usuarios WHERE idx=? ",[rows[0].usuario]);
+           res.json({'token':rows[0].token,'correo':rows1[0].correo,'idx':rows1[0].idx});
+        }else{
+            res.sendStatus(500);
         }
-    res.json(rows);
+    
 }
 
 /**Verificamos las credenciales */
