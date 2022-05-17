@@ -23,4 +23,12 @@ Content-Type: application/json
 }
 
 ###
+POST {{api}}/dev
+Content-Type: application/json
+
+{
+    "dispositivo":"ANDROIDZ"
+}
+
+###
 DELETE {{api}}/9
